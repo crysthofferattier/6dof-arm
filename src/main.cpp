@@ -7,6 +7,10 @@ const int elbowServoPin = 6;
 
 Servo base, sholder, elbow;
 
+const int baseAngle = 0;
+const int sholderAngle = 0;
+const int elbowAngle = 0;
+
 void setup() {
   base.attach(baseServoPin);
   sholder.attach(sholderServoPin);
@@ -17,9 +21,9 @@ void loop() {
   base.write(90);
   sholder.write(90);
   elbow.write(90);
-  delay(1000);
-  base.write(120);
-  sholder.write(100);
-  elbow.write(115);
-  delay(1000);
+  delay(3000);
+  base.write(baseAngle);
+  sholder.write(sholderAngle);
+  elbow.write(elbowAngle);
+  delay(3000);
 }
